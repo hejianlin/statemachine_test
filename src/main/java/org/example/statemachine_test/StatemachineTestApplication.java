@@ -1,15 +1,16 @@
 package org.example.statemachine_test;
 
+import lombok.extern.slf4j.Slf4j;
 import org.example.statemachine_test.statemanchine.IOrderService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
-
+@Slf4j
 @SpringBootApplication
 public class StatemachineTestApplication {
 
     public static void main(String[] args) {
-
+        log.info("开始测试状态机");
         Thread.currentThread().setName("主线程");
         ConfigurableApplicationContext context = SpringApplication.run(StatemachineTestApplication.class,args);
 
